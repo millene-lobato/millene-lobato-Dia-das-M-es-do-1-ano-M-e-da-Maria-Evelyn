@@ -1,0 +1,127 @@
+body {
+  background: linear-gradient(#ffd6e0, #ffc0cb);
+  text-align: center;
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+/* CONTAINER CENTRAL */
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+/* FOTO */
+.foto {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+/* ENVELOPE */
+.envelope {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  height: 260px; /* 🔥 aumentado */
+  margin: 30px auto;
+  cursor: pointer;
+}
+
+/* CORPO */
+.corpo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffb6c1;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+/* TAMPA */
+.tampa {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ff8fab;
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+  transform-origin: top;
+  transition: 0.6s;
+  z-index: 4;
+}
+
+/* CORAÇÃO */
+.coracao {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  z-index: 5;
+  transition: 0.3s;
+}
+
+.envelope:hover .coracao {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* CARTA */
+.carta {
+  position: absolute;
+  width: 95%;
+  left: 2.5%;
+  bottom: 10px;
+
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+
+  transform: translateY(120%);
+  transition: all 0.7s ease;
+
+  z-index: 5;
+  opacity: 0;
+
+  text-align: center;
+  box-sizing: border-box; /* 🔥 corrige desalinhamento */
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* extra bonito */
+}
+
+/* TEXTO */
+.carta p {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+/* VÍDEO */
+.carta video {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+/* ANIMAÇÃO ABRIR */
+.envelope.aberto .tampa {
+  transform: rotateX(180deg);
+}
+
+.envelope.aberto .carta {
+  transform: translateY(-80%); /* 🔥 corrigido */
+  opacity: 1;
+}
+
+/* BOTÃO */
+#playMusic {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+}
