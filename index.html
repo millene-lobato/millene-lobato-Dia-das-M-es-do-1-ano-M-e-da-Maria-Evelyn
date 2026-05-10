@@ -3,44 +3,74 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <title>Cartinha 💖</title>
+
+  <title>Cartinha Pra Você 💖</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<audio id="musica" loop>
-  <source src="Fico Assim Sem Você.mpeg" type="audio/mpeg">
-</audio>
+  <!-- MÚSICA -->
+  <audio id="musica" loop>
+    <source src="Fico Assim Sem Você.mpeg" type="audio/mpeg">
+  </audio>
 
-<button id="playMusic">▶ Tocar música</button>
+  <!-- BOTÃO -->
+  <button id="playMusic">▶ Play Music</button>
 
-<div class="container">
+  <div class="container">
 
-  <!-- FOTO -->
-  <img src="Mãe da Maria Evellyn.jpeg" class="foto">
+    <!-- FOTO -->
+    <img src="foto1.jpeg" class="foto">
 
-  <!-- ENVELOPE -->
-  <div class="envelope" onclick="abrirCarta()">
+    <!-- ENVELOPE -->
+    <div class="envelope" onclick="abrirCarta()">
 
-    <div class="tampa"></div>
-    <div class="corpo"></div>
+      <div class="tampa"></div>
 
-    <div class="coracao">❤️</div>
+      <div class="corpo"></div>
 
-    <!-- CARTA -->
-    <div class="carta" id="carta">
-      <p>Oi 💕 fiz isso pra você</p>
+      <div class="coracao">❤️</div>
 
-      <video controls>
-        <source src="WhatsApp Video 2026-05-09 at 00.17.20.mp4" type="video/mp4">
-      </video>
+      <!-- CARTA -->
+      <div class="carta">
+
+        <p>Mãe, minha flor, minha rainha! 💖</p>
+
+        <!-- CARROSSEL -->
+        <div class="carrossel">
+
+          <div class="slides" id="slides">
+
+            <img src="foto2.jpeg" class="slide">
+
+            <img src="foto3.jpeg" class="slide">
+
+            <img src="foto4.jpeg" class="slide">
+
+          </div>
+
+        </div>
+
+        <!-- BOLINHAS -->
+        <div class="indicador">
+
+          <div class="bolinha ativa"></div>
+
+          <div class="bolinha"></div>
+
+          <div class="bolinha"></div>
+
+        </div>
+
+      </div>
 
     </div>
 
   </div>
 
-</div>
+  <script src="script.js"></script>
 
-<script src="script.js"></script>
 </body>
 </html>
